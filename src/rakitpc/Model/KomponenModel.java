@@ -1,10 +1,18 @@
-package rakitpc;
+package rakitpc.Model;
 
 public class KomponenModel {
 
-    private String kodekomponen, namakomponen, brand, socket, kategori, gambar;
+    private String kategori, kodekomponen, namakomponen, brand, socket, jenismemori, gambar;
     private double harga;
     private int stok;
+
+    public String getKategori() {
+        return kategori;
+    }
+
+    public void setKategori(String kategori) {
+        this.kategori = kategori;
+    }
 
     public String getKodekomponen() {
         return kodekomponen;
@@ -38,12 +46,12 @@ public class KomponenModel {
         this.socket = socket;
     }
 
-    public String getKategori() {
-        return kategori;
+    public String getJenismemori() {
+        return jenismemori;
     }
 
-    public void setKategori(String kategori) {
-        this.kategori = kategori;
+    public void setJenismemori(String jenismemori) {
+        this.jenismemori = jenismemori;
     }
 
     public String getGambar() {

@@ -7,20 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="239.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXMLDashboardController">
+<AnchorPane id="AnchorPane" prefHeight="239.0" prefWidth="645.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLDashboardController">
    <children>
       <MenuBar layoutX="49.0" layoutY="14.0" prefHeight="25.0" prefWidth="547.0">
          <menus>
             <Menu mnemonicParsing="false" text="Display Data">
                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#DataCustClick" text="Customer" />
                   <MenuItem mnemonicParsing="false" onAction="#DataKomponenClick" text="Komponen" />
                   <MenuItem mnemonicParsing="false" onAction="#DataRakitClick" text="Rakit" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Input Data">
                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#InputCustClick" text="Customer" />
                   <MenuItem mnemonicParsing="false" onAction="#InputKomponenClick" text="Komponen" />
-                  <MenuItem mnemonicParsing="false" onAction="#MerakitPCClick" text="Rakit" />
+                  <MenuItem mnemonicParsing="false" onAction="#InputRakitClick" text="Rakit" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Transaksi">
@@ -37,7 +39,7 @@
       </MenuBar>
       
       <!-- Button untuk Merakit PC -->
-      <Button layoutX="212.0" layoutY="111.0" mnemonicParsing="false" onAction="#MerakitPCClick" prefHeight="40.0" prefWidth="220.0" text="Klik untuk merakit PC">
+      <Button layoutX="212.0" layoutY="111.0" mnemonicParsing="false" onAction="#InputRakitClick" prefHeight="40.0" prefWidth="220.0" text="Klik untuk merakit PC">
          <font>
             <Font name="Microsoft Sans Serif" size="20.0" />
          </font></Button>

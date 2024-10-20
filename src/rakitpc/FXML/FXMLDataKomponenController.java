@@ -1,5 +1,6 @@
-package rakitpc;
+package rakitpc.FXML;
 
+import rakitpc.Model.KomponenModel;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -58,41 +59,49 @@ public class FXMLDataKomponenController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        setupTableColumns(); 
+        setupTableColumns();
         showdata();
         tbvkomponen.getSelectionModel().selectFirst();
         showgambar();
     }
 
-    private void setupTableColumns() { 
-        TableColumn<KomponenModel, String> col1 = new TableColumn<>("kodekomponen");
-        col1.setCellValueFactory(new PropertyValueFactory<>("kodekomponen"));
-        
-        TableColumn<KomponenModel, String> col2 = new TableColumn<>("namakomponen");
-        col2.setCellValueFactory(new PropertyValueFactory<>("namakomponen"));
-        
-        TableColumn<KomponenModel, String> col3 = new TableColumn<>("brand");
-        col3.setCellValueFactory(new PropertyValueFactory<>("brand"));
+    private void setupTableColumns() {
+        TableColumn<KomponenModel, String> col1 = new TableColumn<>("kategori");
+        col1.setCellValueFactory(new PropertyValueFactory<>("kategori"));
 
-        TableColumn<KomponenModel, String> col4 = new TableColumn<>("socket");
-        col4.setCellValueFactory(new PropertyValueFactory<>("socket"));
+        TableColumn<KomponenModel, String> col2 = new TableColumn<>("kodekomponen");
+        col2.setCellValueFactory(new PropertyValueFactory<>("kodekomponen"));
 
-        TableColumn<KomponenModel, String> col5 = new TableColumn<>("kategori");
-        col5.setCellValueFactory(new PropertyValueFactory<>("kategori"));
+        TableColumn<KomponenModel, String> col3 = new TableColumn<>("namakomponen");
+        col3.setCellValueFactory(new PropertyValueFactory<>("namakomponen"));
 
-        TableColumn<KomponenModel, String> col6 = new TableColumn<>("harga");
-        col6.setCellValueFactory(new PropertyValueFactory<>("harga"));
+        TableColumn<KomponenModel, String> col4 = new TableColumn<>("brand");
+        col4.setCellValueFactory(new PropertyValueFactory<>("brand"));
 
-        TableColumn<KomponenModel, String> col7 = new TableColumn<>("stok");
-        col7.setCellValueFactory(new PropertyValueFactory<>("stok"));
+        TableColumn<KomponenModel, String> col5 = new TableColumn<>("socket");
+        col5.setCellValueFactory(new PropertyValueFactory<>("socket"));
 
-        tbvkomponen.getColumns().addAll(col1, col2, col3, col4, col5, col6, col7);
-        tbvkomponen.setPlaceholder(new Label("Tidak ada data untuk ditampilkan.")); // Placeholder
+        // Tambahkan kolom untuk jenis memori
+        TableColumn<KomponenModel, String> col6 = new TableColumn<>("jenismemori");
+        col6.setCellValueFactory(new PropertyValueFactory<>("jenismemori"));
+
+        TableColumn<KomponenModel, String> col7 = new TableColumn<>("harga");
+        col7.setCellValueFactory(new PropertyValueFactory<>("harga"));
+
+        TableColumn<KomponenModel, String> col8 = new TableColumn<>("stok");
+        col8.setCellValueFactory(new PropertyValueFactory<>("stok"));
+
+        TableColumn<KomponenModel, String> col9 = new TableColumn<>("gambar");
+        col9.setCellValueFactory(new PropertyValueFactory<>("gambar"));
+ 
+        tbvkomponen.getColumns().addAll(col1, col2, col3, col4, col5, col6, col7, col8, col9);
+ 
+        tbvkomponen.setPlaceholder(new Label("Tidak ada data untuk ditampilkan."));
     }
 
     public void showdata() {
         ObservableList<KomponenModel> data = FXMLDashboardController.dtkomponen.Load();
-        tbvkomponen.getItems().clear(); 
+        tbvkomponen.getItems().clear();
 
         if (data != null && !data.isEmpty()) {
             tbvkomponen.setItems(data);
@@ -185,13 +194,13 @@ public class FXMLDataKomponenController implements Initializable {
     }
 
     @FXML
-    private void searchclick(ActionEvent event) {
+    private void cariData(KeyEvent event) {
         String key = searchkomponen.getText();
         searchKomponen(key);
     }
 
     @FXML
-    private void cariData(KeyEvent event) {
+    private void searchclick(ActionEvent event) {
         String key = searchkomponen.getText();
         searchKomponen(key);
     }

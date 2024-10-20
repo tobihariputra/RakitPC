@@ -1,5 +1,6 @@
-package rakitpc;
+package rakitpc.FXML;
 
+import rakitpc.Model.KomponenModel;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -148,7 +149,7 @@ public class FXMLInputKomponenController implements Initializable {
             case "VGA":
             case "Storage":
             case "Power Supply":
-                lblkategori1.setText(selectedCategory.equals("RAM") ? "Jenis Memory"
+                lblkategori1.setText(selectedCategory.equals("RAM") ? "Jenis Memori"
                         : selectedCategory.equals("VGA") ? "Brand"
                         : selectedCategory.equals("Storage") ? "Jenis Storage" : "Jenis Power Supply");
                 lblkategori1.setVisible(true);
@@ -244,9 +245,17 @@ public class FXMLInputKomponenController implements Initializable {
             cmbkategoriutama.setValue(d.getKategori());
             cmbkategoriutama.setDisable(true);
 
-            if ("Processor".equals(d.getKategori()) || "Motherboard".equals(d.getKategori())) {
+            if ("Processor".equals(d.getKategori())) {
                 cmbkategori1.setValue(d.getBrand());
                 cmbkategori2.setValue(d.getSocket());
+            }
+            if ("Motherboard".equals(d.getKategori())) {
+                cmbkategori1.setValue(d.getBrand());
+                cmbkategori2.setValue(d.getSocket());
+                cmbkategori3.setValue(d.getJenismemori());
+            }
+            if ("RAM".equals(d.getKategori())) {
+                cmbkategori1.setValue(d.getJenismemori());
             }
 
             txtkodekomponen.setEditable(false);
@@ -338,9 +347,15 @@ public class FXMLInputKomponenController implements Initializable {
 
         n.setKategori(cmbkategoriutama.getValue());
 
-        if ("Processor".equals(cmbkategoriutama.getValue()) || "Motherboard".equals(cmbkategoriutama.getValue())) {
+        if ("Processor".equals(cmbkategoriutama.getValue())) {
             n.setBrand(cmbkategori1.getValue());
             n.setSocket(cmbkategori2.getValue());
+        } else if ("Motherboard".equals(cmbkategoriutama.getValue())) {
+            n.setBrand(cmbkategori1.getValue());
+            n.setSocket(cmbkategori2.getValue());
+            n.setJenismemori(cmbkategori3.getValue());
+        } else if ("RAM".equals(cmbkategoriutama.getValue())) {
+            n.setJenismemori(cmbkategori1.getValue());
         } else if ("VGA".equals(cmbkategoriutama.getValue())) {
             n.setBrand(cmbkategori1.getValue());
         }
@@ -368,6 +383,9 @@ public class FXMLInputKomponenController implements Initializable {
         } else {
             showErrorAlert("Data sudah ada", txtkodekomponen);
         }
+        System.out.println("Setting Jenis Memori: " + cmbkategori3.getValue());
+        System.out.println("Setting Socket: " + cmbkategori2.getValue());
+
     }
 
     private void showSuccessAlert(String message) {

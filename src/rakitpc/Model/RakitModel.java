@@ -1,4 +1,4 @@
-package rakitpc;
+package rakitpc.Model;
 
 /**
  *

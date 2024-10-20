@@ -1,4 +1,4 @@
-package rakitpc;
+package rakitpc.DB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
