@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="750.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLDataRakitController">
+   <children>
+      <Label layoutX="40.0" layoutY="37.0" style="-fx-font-size: 32; -fx-text-fill: white;" text="DATA RAKIT">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvrakit" layoutX="48.0" layoutY="166.0" prefHeight="226.0" prefWidth="359.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="48.0" layoutY="99.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="No Rakit" />
+      <TableView fx:id="tbvdetilrakit" layoutX="45.0" layoutY="506.0" prefHeight="278.0" prefWidth="662.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+      <Label layoutX="48.0" layoutY="455.0" style="-fx-font-size: 20; -fx-padding: 10px 10; -fx-text-fill: white; -fx-background-color: black;" text="DETIL RAKIT">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="249.0" layoutY="809.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="Total Sebelum PPN 12%">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txttotal" editable="false" layoutX="490.0" layoutY="811.0" prefHeight="48.0" prefWidth="186.0" />
+      <VBox layoutX="424.0" layoutY="150.0" prefHeight="180.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="72.0" prefWidth="317.0">
+               <children>
+                  <Button fx:id="btnprev" mnemonicParsing="false" onAction="#prevclick" prefHeight="51.0" prefWidth="100.0" text="Prev">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/prev.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnnext" mnemonicParsing="false" onAction="#nextclick" prefHeight="51.0" prefWidth="100.0" text="Next">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="38.0" prefWidth="126.0">
+               <children>
+                  <Button fx:id="btnfirst" mnemonicParsing="false" onAction="#firstclick" prefHeight="51.0" prefWidth="100.0" text="First">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/first.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnlast" mnemonicParsing="false" onAction="#lastclick" prefHeight="51.0" prefWidth="100.0" text="Last">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/last.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="147.0" layoutY="90.0" prefHeight="69.0" prefWidth="359.0">
+         <children>
+            <TextField fx:id="txtnorakit" prefHeight="48.0" prefWidth="230.0" promptText="Search by norakit" />
+            <Button fx:id="btnsearch" mnemonicParsing="false" onAction="#searchclick" prefHeight="46.0" prefWidth="98.0" text="Search">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icon/search_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="424.0" layoutY="318.0" prefHeight="180.0" prefWidth="290.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="270.0">
+               <children>
+                  <Button fx:id="btninsert" mnemonicParsing="false" onAction="#insertclick" prefHeight="51.0" prefWidth="110.0" text="Insert">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btndelete" mnemonicParsing="false" onAction="#deleteclick" prefHeight="51.0" prefWidth="110.0" text="Delete">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/delete.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="20.0" layoutY="74.0" prefHeight="41.0" prefWidth="270.0">
+               <children>
+                  <Button fx:id="btnupdate" mnemonicParsing="false" onAction="#updateclick" prefHeight="51.0" prefWidth="110.0" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnexit" mnemonicParsing="false" onAction="#exitclick" prefHeight="86.0" prefWidth="110.0" text="Exit" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

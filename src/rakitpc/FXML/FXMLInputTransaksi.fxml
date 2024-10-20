@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="830.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLInputTransaksiController">
+   <children>
+      <Label layoutX="65.0" layoutY="44.0" style="-fx-font-size: 32; -fx-text-fill: white;" text="INPUT TRANSAKSI">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="124.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 10; -fx-background-color: black;" text="No Transaksi" />
+      <Label layoutX="65.0" layoutY="176.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="Tanggal" />
+      <TextField fx:id="txtnotransaksi" disable="true" editable="false" layoutX="208.0" layoutY="126.0" />
+      <DatePicker fx:id="dtptanggal" layoutX="208.0" layoutY="188.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button fx:id="btnsave" layoutX="65.0" layoutY="569.0" mnemonicParsing="false" onAction="#saveklik" prefHeight="46.0" prefWidth="98.0" text="SIMPAN" />
+      <Label layoutX="453.0" layoutY="116.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="Pilih Customer" />
+      <Label layoutX="65.0" layoutY="326.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 10; -fx-background-color: black;" text="Pilih Rakitan" />
+      <TableView fx:id="tbvcust" layoutX="453.0" layoutY="176.0" onMouseClicked="#tbvcustklik" prefHeight="123.0" prefWidth="323.0" />
+      <TableView fx:id="tbvrakit" layoutX="65.0" layoutY="386.0" onMouseClicked="#tbvrakitklik" prefHeight="158.0" prefWidth="250.0" />
+      <Label layoutX="65.0" layoutY="226.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="Id Member" />
+      <TextField fx:id="txtidmember" layoutX="208.0" layoutY="226.0" prefHeight="26.0" prefWidth="130.0" />
+      <TableView fx:id="tbvdetilrakit" layoutX="333.0" layoutY="384.0" prefHeight="157.0" prefWidth="442.0" />
+      <Button fx:id="btnbatal" layoutX="218.0" layoutY="569.0" mnemonicParsing="false" onAction="#batalklik" prefHeight="46.0" prefWidth="97.0" text="BATAL" />
+      <Label layoutX="333.0" layoutY="324.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="No Rakit" />
+      <TextField fx:id="txtnorakit" layoutX="429.0" layoutY="326.0" prefHeight="26.0" prefWidth="130.0" />
+      <TextField fx:id="txtsubtotalbayar" layoutX="573.0" layoutY="564.0" />
+      <Label layoutX="476.0" layoutY="564.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="Subtotal" />
+      <TextField fx:id="txtppn" layoutX="573.0" layoutY="614.0" />
+      <Label layoutX="476.0" layoutY="614.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="PPN 12%" />
+      <TextField fx:id="txttotalbayar" layoutX="573.0" layoutY="664.0" />
+      <Label layoutX="476.0" layoutY="664.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="TOTAL" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="731.0" prefWidth="973.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLLaporanTransaksiController">
+    <children>
+        <TabPane layoutX="57.0" layoutY="102.0" prefHeight="580.0" prefWidth="858.0">
+            <!-- Tab 1: Daftar Transaksi -->
+            <Tab text="Daftar Transaksi">
+                <content>
+                    <TableView fx:id="tableDaftarTransaksi" prefHeight="551.0" prefWidth="885.0">
+                        <columns>
+                            <TableColumn fx:id="colIdTransaksi" text="ID Transaksi" />
+                            <TableColumn fx:id="colNamaMember" text="Nama Member" />
+                            <TableColumn fx:id="colAlamatMember" text="Alamat Member" />
+                            <TableColumn fx:id="colNomorRakit" text="Nomor Rakit" />
+                            <TableColumn fx:id="colTanggalTransaksi" text="Tanggal Transaksi" />
+                            <TableColumn fx:id="colTotalBayar" text="Total Bayar" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            
+            <!-- Tab 2: Detail Komponen -->
+            <Tab text="Detail Komponen">
+                <content>
+                    <TableView fx:id="tableDetailKomponen" prefHeight="500.0" prefWidth="760.0">
+                        <columns>
+                            <TableColumn fx:id="colIdTransaksiKomponen" text="ID Transaksi" />
+                            <TableColumn fx:id="colKodeKomponen" text="Kode Komponen" />
+                            <TableColumn fx:id="colNamaKomponen" text="Nama Komponen" />
+                            <TableColumn fx:id="colBrandKomponen" text="Brand" />
+                            <TableColumn fx:id="colJumlahKomponen" text="Jumlah" />
+                            <TableColumn fx:id="colSubtotalKomponen" text="Subtotal" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            
+            <!-- Tab 3: Pendapatan Per Tanggal -->
+            <Tab text="Pendapatan Per Tanggal">
+                <content>
+                    <TableView fx:id="tablePendapatanTanggal" prefHeight="500.0" prefWidth="760.0">
+                        <columns>
+                            <TableColumn fx:id="colTanggalPendapatan" text="Tanggal" />
+                            <TableColumn fx:id="colTotalPendapatan" text="Total Pendapatan" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            
+            <!-- Tab 4: Komponen Terlaris -->
+            <Tab text="Komponen Terlaris">
+                <content>
+                    <TableView fx:id="tableKomponenTerlaris" prefHeight="500.0" prefWidth="760.0">
+                        <columns>
+                            <TableColumn fx:id="colNamaKomponenTerlaris" text="Nama Komponen" />
+                            <TableColumn fx:id="colTotalTerjual" text="Total Terjual" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            
+            <!-- Tab 5: Pelanggan Transaksi Tertinggi -->
+            <Tab text="Pelanggan Terbaik">
+                <content>
+                    <TableView fx:id="tablePelangganTertinggi" prefHeight="500.0" prefWidth="760.0">
+                        <columns>
+                            <TableColumn fx:id="colNamaPelanggan" text="Nama Pelanggan" />
+                            <TableColumn fx:id="colTotalBiayaRakit" text="Total Biaya Rakit" />
+                            <TableColumn fx:id="colTotalBayarPelanggan" text="Total Bayar" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+        </TabPane>
+      <Label layoutX="57.0" layoutY="34.0" style="-fx-font-size: 36; -fx-padding: 10px 0; -fx-text-fill: white;" text="LAPORAN TRANSAKSI" textFill="#177a62">
+         <font>
+            <Font name="Berlin Sans FB Bold" size="39.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

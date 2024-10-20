@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLLaporanKomponenController">
+    <children>
+         <!-- Label Title -->
+         <Label layoutX="31.0" layoutY="29.0" style="-fx-font-size: 42; -fx-text-fill: white;" text="LAPORAN KOMPONEN" />
+
+         <!-- TableView for displaying components -->
+         <TableView fx:id="tableViewKomponen" layoutX="31.0" layoutY="113.0" prefHeight="800.0" prefWidth="1143.0">
+             <columns>
+                 <!-- Table Columns -->
+                 <TableColumn fx:id="columnKodeKomponen" prefWidth="142.40003061294556" text="Kode Komponen" />
+                 <TableColumn fx:id="columnNamaKomponen" prefWidth="179.1999969482422" text="Nama Komponen" />
+                 <TableColumn fx:id="columnKategori" minWidth="0.0" prefWidth="87.20004272460938" text="Kategori" />
+                 <TableColumn fx:id="columnBrand" prefWidth="88.0" text="Brand" />
+                 <TableColumn fx:id="columnSocket" prefWidth="102.4000244140625" text="Socket" />
+                 <TableColumn fx:id="columnJenisMemori" prefWidth="119.20001220703125" text="Jenis Memori" />
+                 <TableColumn fx:id="columnHarga" prefWidth="51.20001220703125" text="Harga" />
+                 <TableColumn fx:id="columnStokTersedia" prefWidth="39.20001220703125" text="Stok" />
+                 <TableColumn fx:id="columnJumlahTerpakai" prefWidth="125.5999755859375" text="Jumlah Terpakai" />
+                 <TableColumn fx:id="columnNoRakit" prefWidth="194.40008544921875" text="Terpakai Pada No Rakit" />
+             </columns>
+         </TableView>
+    </children>
+</AnchorPane>

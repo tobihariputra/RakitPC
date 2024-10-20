@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="893.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLLaporanCustomerController">
+    <children>
+        <!-- Title Label -->
+        <Label layoutX="60.0" layoutY="37.0" style="-fx-font-size: 42; -fx-font-weight: bold; -fx-text-fill: white;" text="LAPORAN CUSTOMER" />
+        <TableView fx:id="tbvlaporancustomer" layoutX="60.0" layoutY="121.0" prefHeight="523.0" prefWidth="771.0">
+            <columns>
+                <TableColumn fx:id="colIdMember" prefWidth="105.59998321533203" text="ID Member" />
+                <TableColumn fx:id="colNama" prefWidth="77.5999755859375" text="Nama" />
+                <TableColumn fx:id="colAlamat" prefWidth="78.39996337890625" text="Alamat" />
+                <TableColumn fx:id="colTotalBiaya" prefWidth="140.0" text="Total Biaya Rakit" />
+                <TableColumn fx:id="colIdTransaksi" prefWidth="104.79995727539062" text="ID Transaksi" />
+                <TableColumn fx:id="colNoRakit" text="No Rakit" />
+                <TableColumn fx:id="colTanggal" prefWidth="175.0" text="Tanggal" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

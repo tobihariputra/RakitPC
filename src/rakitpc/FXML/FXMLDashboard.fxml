@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLDashboardController">
+    <children>
+           <!-- Styled MenuBar with icons -->
+           <MenuBar layoutX="40.0" layoutY="350.0" prefHeight="74.0" prefWidth="768.0" style="-fx-background-color: #2c9a99; -fx-text-fill: white; -fx-border-color: white; -fx-border-radius: 10px;">
+               <menus>
+                   <Menu style="-fx-font-size: 24px;" text="📊 Display Data">
+                       <items>
+                           <MenuItem onAction="#DataCustClick" text="📋 Customer" />
+                           <MenuItem onAction="#DataKomponenClick" text="🔧 Komponen" />
+                           <MenuItem onAction="#DataRakitClick" text="🖥️ Rakit" />
+                       </items>
+                   </Menu>
+                   <Menu style="-fx-font-size: 24px;" text="➕ Input Data">
+                       <items>
+                           <MenuItem onAction="#InputCustClick" text="👤 Customer" />
+                           <MenuItem onAction="#InputKomponenClick" text="🔩 Komponen" />
+                           <MenuItem onAction="#InputRakitClick" text="🖥️ Rakit" />
+                       </items>
+                   </Menu>
+                   <Menu style="-fx-font-size: 24px;" text="💳 Transaksi">
+                       <items>
+                           <MenuItem onAction="#DataTransaksiClick" text="📊 Data Transaksi" />
+                           <MenuItem onAction="#InputTransaksiClick" text="💼 Input Transaksi" />
+                       </items>
+                   </Menu>
+                   <Menu style="-fx-font-size: 24px;" text="📑 Laporan">
+                       <items>
+                           <MenuItem onAction="#LaporanTransaksiClick" text="📈 Laporan Transaksi" />
+                           <MenuItem onAction="#LaporanCustomerClick" text="📋 Laporan Customer" />
+                           <MenuItem onAction="#LaporanKomponenClick" text="🔩 Laporan Komponen" />
+                       </items>
+                   </Menu>
+               </menus>
+           </MenuBar>
+      <Text layoutX="143.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SELAMAT DATANG DI SISTEM SIMULASI PERAKITAN PC" textAlignment="CENTER" wrappingWidth="557.3367309570312">
+         <font>
+            <Font name="System Bold" size="52.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0" startX="1.0" startY="0.8219696897448916">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5629629492759705" green="1.0" blue="0.8907407522201538" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09019608050584793" green="0.47843137383461" blue="0.3843137323856354" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+    </children>
+</AnchorPane>

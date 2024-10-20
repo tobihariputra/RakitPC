@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLInputCustController">
+    <children>
+        <Label layoutX="107.0" layoutY="118.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="ID/Member" />
+        <Label layoutX="107.0" layoutY="168.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="Nama Customer" />
+        <Label layoutX="107.0" layoutY="218.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="Alamat" />
+        <Label layoutX="107.0" layoutY="268.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="Total Biaya Rakit" />
+        <TextField fx:id="txtidmember" layoutX="307.0" layoutY="118.0" />
+        <TextField fx:id="txtnama" layoutX="307.0" layoutY="168.0" />
+        <TextField fx:id="txtalamat" layoutX="307.0" layoutY="218.0" />
+        <TextField fx:id="txttotal" layoutX="307.0" layoutY="268.0" />
+        <Button fx:id="btnsave" layoutX="173.0" layoutY="340.0" mnemonicParsing="false" onAction="#saveclick" prefHeight="26.0" prefWidth="68.0" text="Save" />
+        <Button fx:id="btncancel" layoutX="273.0" layoutY="340.0" mnemonicParsing="false" onAction="#cancelclick" prefHeight="46.0" prefWidth="68.0" text="Reset" />
+        <Button fx:id="btnexit" layoutX="373.0" layoutY="340.0" mnemonicParsing="false" onAction="#exitclick" prefHeight="46.0" prefWidth="68.0" text="Exit" />
+      <Label layoutX="91.0" layoutY="36.0" style="-fx-font-size: 32; -fx-padding: 10px 0; -fx-text-fill: white;" text="INPUT/UPDATE CUSTOMER" />
+    </children>
+</AnchorPane>

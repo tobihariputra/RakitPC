@@ -1,0 +1,175 @@
+/* Global Styles */
+AnchorPane {
+    -fx-background-image: url("../image/bg.png");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-padding: 20px;
+}
+
+/* Header Label */
+Label {
+    -fx-font-size: 12px;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-weight: 900;
+    -fx-text-fill: #000000;
+}
+
+/* TextField */
+TextField {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-border-color: #2c9a99;
+}
+
+ComboBox {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-border-color: #2c9a99;
+}
+
+/* Buttons */
+Button {
+    -fx-background-radius: 15px;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+Button:hover {
+    -fx-background-color: linear-gradient(to bottom, #34d5c4, #2c9a99);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+Button:pressed {
+    -fx-background-color: #2c9a99;
+}
+
+/* Insert Button */
+#btninsert {
+    -fx-background-color: #2ecc71;
+}
+#btninsert:hover {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+#btnsimpan,
+#btnsave {
+    -fx-background-color: #4caf50;
+}
+#btnsimpan:hover,
+#btnsave:hover {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+}
+
+/* Delete Button */
+#btndelete {
+    -fx-background-color: #e74c3c;
+}
+#btndelete:hover {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+}
+
+/* Update Button */
+#btnupdate {
+    -fx-background-color: #f1c40f;
+}
+#btnupdate:hover {
+    -fx-background-color: #d3cf00;
+    -fx-text-fill: white;
+}
+
+#btnreset {
+    -fx-background-color: #f1c40f;
+}
+#btnreset:hover {
+    -fx-background-color: #d3cf00;
+    -fx-text-fill: white;
+}
+
+/* Exit Button */
+#btnexit {
+    -fx-background-color: #2196f3;
+}
+#btnexit:hover {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+}
+
+/* TableView */
+TableView {
+    -fx-background-color: white;
+    -fx-border-color: #2c9a99;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(44, 154, 153, 0.4), 10, 0.5, 0, 0);
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c9a99;
+    -fx-alignment: center-left;
+    -fx-table-cell-border-color: #2c9a99;
+    -fx-table-header-border-color: #2c9a99;
+}
+
+.table-view .column-header .label {
+    -fx-text-overrun: clip;
+    -fx-wrap-text: false;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c9a99;
+    -fx-alignment: center-left;
+}
+
+/* HBox and VBox */
+HBox,
+VBox {
+    -fx-spacing: 15px;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+/* TabPane */
+TabPane {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #2c9a99;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px;
+}
+
+/* Tab Header */
+.tab {
+    -fx-background-color: linear-gradient(to bottom, #34d5c4, #2c9a99);
+    -fx-text-fill: white;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+    -fx-effect: dropshadow(gaussian, rgba(44, 154, 153, 0.4), 10, 0.5, 0, 0);
+    -fx-tab-min-height: 50px; /* Atur tinggi minimum tab */
+    -fx-tab-max-height: 50px; /* Atur tinggi maksimum tab */
+}
+
+.tab:selected {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+}
+
+/* Tab Header Hover Effect */
+.tab:hover {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="860.0" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rakitpc.FXML.FXMLInputRakitController">
+   <children>
+      <!-- Title Label -->
+      <Label layoutX="46.0" layoutY="27.0" style="-fx-font-size: 32; -fx-text-fill: white;" text="INPUT/UPDATE RAKITAN PC">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+
+      <!-- Brand Processor Section -->
+      <Label layoutX="46.0" layoutY="88.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="BRAND PROCESSOR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbbrand" layoutX="46.0" layoutY="138.0" prefHeight="48.0" prefWidth="275.0" />
+      
+      <Label layoutX="46.0" layoutY="210.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="PROCESSOR (CPU)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcpu" layoutX="275.0" layoutY="210.0" prefHeight="26.0" prefWidth="300.0" />
+      
+      <Label layoutX="373.0" layoutY="88.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="SOCKET">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbsocket" layoutX="373.0" layoutY="138.0" prefHeight="59.0" prefWidth="155.0" />
+
+      <!-- Motherboard Section -->
+      <Label layoutX="46.0" layoutY="260.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="MOTHERBOARD">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbmotherboard" layoutX="275.0" layoutY="260.0" prefHeight="26.0" prefWidth="300.0" />
+      
+      <Label layoutX="584.0" layoutY="146.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="JUMLAH">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+
+      <!-- RAM Section -->
+      <Label layoutX="46.0" layoutY="310.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="RAM">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbram" layoutX="275.0" layoutY="310.0" prefHeight="26.0" prefWidth="300.0" />
+      
+      <!-- VGA Section -->
+      <Label layoutX="46.0" layoutY="360.0" style="-fx-font-size: 20; -fx-padding: 10px 10; -fx-text-fill: white; -fx-background-color: black;" text="VGA">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbvga" layoutX="275.0" layoutY="360.0" prefHeight="26.0" prefWidth="300.0" />
+
+      <!-- Storage Section -->
+      <Label layoutX="46.0" layoutY="410.0" style="-fx-font-size: 20; -fx-padding: 10px 10; -fx-text-fill: white; -fx-background-color: black;" text="STORAGE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbstorage" layoutX="275.0" layoutY="410.0" prefHeight="26.0" prefWidth="300.0" />
+
+      <!-- Power Supply Section -->
+      <Label layoutX="46.0" layoutY="460.0" style="-fx-font-size: 20; -fx-padding: 10px 10; -fx-text-fill: white; -fx-background-color: black;" text="POWER SUPPLY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbpsu" layoutX="275.0" layoutY="460.0" prefHeight="26.0" prefWidth="300.0" />
+
+      <!-- CPU Cooler Section -->
+      <Label layoutX="46.0" layoutY="510.0" style="-fx-font-size: 20; -fx-padding: 10px 10; -fx-text-fill: white; -fx-background-color: black;" text="CPU COOLER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcpucooler" layoutX="275.0" layoutY="510.0" prefHeight="26.0" prefWidth="300.0" />
+
+      <!-- Casing Section -->
+      <Label layoutX="46.0" layoutY="560.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="CASING">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbcasing" layoutX="275.0" layoutY="560.0" prefHeight="26.0" prefWidth="300.0" />
+
+      <!-- Buttons -->
+      <Button fx:id="btnsimpan" layoutX="160.0" layoutY="699.0" mnemonicParsing="false" onAction="#simpanclick" prefHeight="38.0" prefWidth="134.0" text="SIMPAN">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnreset" layoutX="360.0" layoutY="699.0" mnemonicParsing="false" onAction="#resetclick" prefHeight="38.0" prefWidth="134.0" text="RESET">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnexit" layoutX="560.0" layoutY="699.0" mnemonicParsing="false" onAction="#exitclick" prefHeight="38.0" prefWidth="134.0" text="EXIT">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+
+      <!-- Quantity Fields -->
+      <TextField fx:id="qtycpu" layoutX="596.0" layoutY="210.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtymotherboard" layoutX="596.0" layoutY="260.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtyram" layoutX="596.0" layoutY="310.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtyvga" layoutX="596.0" layoutY="360.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtystorage" layoutX="596.0" layoutY="410.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtypsu" layoutX="596.0" layoutY="460.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtycpucooler" layoutX="596.0" layoutY="510.0" prefHeight="26.0" prefWidth="58.0" />
+      <TextField fx:id="qtycasing" layoutX="596.0" layoutY="560.0" prefHeight="26.0" prefWidth="58.0" />
+
+      <!-- Subtotal Fields -->
+      <Label layoutX="691.0" layoutY="146.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="SUBTOTAL">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="subtotalcpu" editable="false" layoutX="671.0" layoutY="210.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalmotherboard" editable="false" layoutX="671.0" layoutY="260.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalram" editable="false" layoutX="671.0" layoutY="310.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalvga" editable="false" layoutX="671.0" layoutY="360.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalstorage" editable="false" layoutX="671.0" layoutY="410.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalpsu" editable="false" layoutX="671.0" layoutY="460.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalcpucooler" editable="false" layoutX="671.0" layoutY="510.0" prefHeight="26.0" prefWidth="142.0" />
+      <TextField fx:id="subtotalcasing" editable="false" layoutX="671.0" layoutY="560.0" prefHeight="26.0" prefWidth="142.0" />
+      <Label layoutX="521.0" layoutY="630.0" style="-fx-font-size: 20; -fx-text-fill: white; -fx-padding: 10px 0;" text="TOTAL BAYAR">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalbayar" editable="false" layoutX="671.0" layoutY="630.0" prefHeight="26.0" prefWidth="142.0" />
+      <Label layoutX="580.0" layoutY="88.0" style="-fx-font-size: 20; -fx-padding: 10px 0; -fx-text-fill: white;" text="No Rakit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblnorakit" layoutX="691.0" layoutY="100.0" prefHeight="27.0" prefWidth="74.0" style="-fx-text-fill: white; -fx-font-size: 20; -fx-font-weight: 900;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="79.0" style="-fx-text-fill: white; -fx-background-color: BLACK;" text="NOTE : PILIH SEMUA COMBOBOX TERLEBIH DAHULU DARI BRAND, SOCKET, dst, BARU ISI MASING&quot; JUMLAH" />
+   </children>
+</AnchorPane>
